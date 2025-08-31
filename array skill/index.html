@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style3.css">
+        <title>Array Skills</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My Skills</h1>
+    <ul id="skillsList"></ul>
+  </div>
+
+  <script>
+    const skills = [
+      { name: "HTML", proficiency: "Advanced" },
+      { name: "CSS", proficiency: "Intermediate" },
+      { name: "JavaScript", proficiency: "Beginner" },
+      { name: "React", proficiency: "Intermediate" },
+      { name: "Node.js", proficiency: "Beginner" }
+    ];
+
+    function displaySkills(skillArray) {
+      const skillsList = document.getElementById('skillsList');
+      
+      skillArray.map(skill => {
+        const li = document.createElement('li');
+
+        const skillName = document.createElement('span');
+        skillName.textContent = skill.name;
+
+        const badge = document.createElement('span');
+        badge.textContent = skill.proficiency;
+        badge.classList.add('badge', skill.proficiency);
+
+        li.appendChild(skillName);
+        li.appendChild(badge);
+        skillsList.appendChild(li);
+      });
+    }
+
+    displaySkills(skills);
+  </script>
+    </body>
+</html>
