@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title> My Buisness card</title>
+    </head>
+    <body>
+        <div class="card">
+            <img src="image/IMG-20241125-WA0019.jpg" alt="Profile Pic" class="profile"/>
+            <div class="name" >ARYAN YADAV</div>
+            <div class="title" >Web Developer</div>
+            <div class="bio">Learning the art of transforming ideas into websites<br>
+                Passionate about building responsive and user-friendly websites
+            </div>
+            <div class="Connect">Connect With:</div>
+            <div class="social">
+                <a href="https://www.instagram.com/aryan_yadav_22?igsh=OWF4bTAxd2h6YmU0" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="www.linkedin.com/in/aryan-yadav-173716317" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Aryan2248" target="_blank"><i class="fa-brands fa-github"></i></a><hr />
+                <button id="mode-toggle">Dark Mode</button>
+            </div>
+            <script>
+                const toggleBtn = document.getElementById("mode-toggle");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});
+
+            </script>
+        </div>
+    </body>
+</html>
