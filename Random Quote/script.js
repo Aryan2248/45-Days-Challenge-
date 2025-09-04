@@ -3,13 +3,15 @@ const quoteAuthor = document.getElementById('author');
 const newQuoteBtn = document.getElementById('new-quote');
 
 
-const apiURL = "https://api.quotable.io/random";
+// const apiURL = "https://api.quotable.io/random";
 
 // for fetch
 async function fetchQuote() {
   try {
-    const response = await fetch(apiURL);
+    const response = await fetch("https://api.quotable.io/random");
     const data = await response.json();
+    console.log(data);
+    
     quoteText.textContent = `"${data.content}"`;
     quoteAuthor.textContent = `— ${data.author}`;
   } catch (error) {
